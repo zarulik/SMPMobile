@@ -1,0 +1,62 @@
+{
+  "_from": "cordova-plugin-starprnt",
+  "_id": "cordova-plugin-starprnt@2.2.0",
+  "_inBundle": false,
+  "_integrity": "sha1-p2bJBHPSy7992nLGCcsdXpyAZME=",
+  "_location": "/cordova-plugin-starprnt",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-starprnt",
+    "name": "cordova-plugin-starprnt",
+    "escapedName": "cordova-plugin-starprnt",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-starprnt/-/cordova-plugin-starprnt-2.2.0.tgz",
+  "_shasum": "a766c90473d2cbbf7dda72c609cb1d5e9c8064c1",
+  "_spec": "cordova-plugin-starprnt",
+  "_where": "F:\\Samvel\\Workspace\\Sage\\2017\\SMPMobile\\SMP Mobile 2017 New\\SMPMobile\\Client\\MobileApp",
+  "author": {
+    "name": "Jose Angarita / Ruben Casas"
+  },
+  "bugs": {
+    "url": "https://github.com/auctifera-josed/starprnt/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-starprnt",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "StarPRNT Cordova Plugin for Star Micronics Bluetooth/LAN printers",
+  "homepage": "https://github.com/auctifera-josed/starprnt#readme",
+  "keywords": [
+    "cordova",
+    "startPRNT",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-starprnt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auctifera-josed/starprnt.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "2.2.0"
+}

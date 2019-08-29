@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.iigservices.smpmobilev2" version="2.1.14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Sage100 Field Service</name>
+    <description>
+        App gives you access to Sage 100 Service Management Online and Offline.
+    </description>
+    <author href="https://www.iigservices.com">
+        Information Integration Group, Inc.
+    </author>
+    <content src="Index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-file" spec="~6.0.1" />
+    <plugin name="cordova-plugin-starprnt" spec="~2.1.0" />
+    <plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
+    <plugin name="cordova-plugin-media-capture" spec="~3.0.2" />
+    <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
+    <plugin name="cordova-sqlite-storage" spec="~2.5.1" />
+    <plugin name="cordova-plugin-speechrecognition" spec="~1.1.2" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
+        <param name="GEOLOCATION_USAGE_DESCRIPTION" value="Technician location request." />
+    </plugin>
+    <plugin name="cordova-plugin-add-swift-support" spec="2.0.1" />
+    <plugin name="cordova-plugin-request-geolocation" spec="f:\Samvel\Workspace\Mobile\cordova-plugin-request-gps" />
+    <engine name="android" spec="^6.4.0" />
+    <engine name="ios" spec="^4.5.5" />
+</widget>

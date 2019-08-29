@@ -1,0 +1,42 @@
+v 2.1.14
+- Index js initialization has been moved to deviceready event.
+- Request Location Plugin has been updated for matching App Store requirements.
+v 2.1.13
+- Fixed issue related to Labors insert.
+- Navigation menu has been brough over loading animation.
+- Added checking for Location Services.
+- Added loading animation to Index.html.
+- Added clear cache button.
+- Fixed issue related to Labors insert lookup.
+v 2.1.12
+- Fixed issues related to async requests to server.
+v 2.1.11 
+- Added Geolocation tracking on insert/update/delete actions.
+- Added Description for Dispatch Header.
+- Added Nature Of Task Edition.
+- Added Colors to SM Task Dispatch Status.
+v 2.1.10
+- Fixed type mistake related to the Labors Edit in the WebView.
+- Corrected iOS Version.
+v 2.1.9
+- Fixed issue related to the cash/check payment processing.
+v 2.1.8
+02/28/2019
+- Added Comment Text to the Labors.
+- Fixed typo mistakes.
+- Lookup Timeout and Record Count are hidden.
+- Corrected Styles for the Dispatch page.
+- Fixed Billing Rate Calculation.
+- Corrected some UI elements.
+- Corrected Activities modal.
+
+Known Issues
+- Sometimes application is crashing when user tries to print invoice via Bluetooth. (related to issue in the Plugin)
+
+v 2.1.7
+01/25/2019
+- Modified Customer Information Modal for showing or hiding Customer AR Information depending on the SMOptions.DisplayCustomerARInfoOnMobile field value.
+- Removed limit of 5 shown records from Typeahead inputs for Inventory Item and Labors input.
+- Added Speech Recognition input for Inventory Item and Labors codes input fields.
+- Hidden "Show Task Extended Information" checkbox in Mobile version.
+- Hidden Settings page in WebSite.

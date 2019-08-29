@@ -1,0 +1,106 @@
+html,
+body {
+    overflow: hidden;
+}
+
+nav{
+    border-bottom: 1px solid;
+    color:#3c8dbc;
+}
+a{
+    color:#3c8dbc;
+}
+label{
+    color:#3c8dbc;
+}
+.dispatchBox p{
+    margin-bottom: 0px;
+}
+.jumbotron{
+    background-color: #FFFFFF;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 3px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #3c8dbc;
+    border-color: #3c8dbc;
+}
+#toggle-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: -moz-available;          
+    height: -webkit-fill-available;  
+    height: fill-available;
+    display: none;
+    z-index: 1300;
+}
+.toggle-menu-inner {
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 0px;
+    border: 1px solid #3c8dbc;
+    border-radius: 10px;
+    width: 150px;
+    z-index: 1300;
+    padding: 10px;
+    margin-right: 10px;
+}
+a.nav-link{
+    display: flex;
+    align-items: center;
+}
+.margin-right-nav-item{
+    margin-right: 5px;
+}
+.dispatchBox{
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 15px;
+}
+.dispatchHeader{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.dispatchBody{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.dispatchButtons{
+    margin-left: 10px;
+}
+.dispatchStatusBar{
+    border-top: 1px solid;
+    text-align: center;
+}
+.modal-body{
+    color:#3c8dbc
+}
+.modal-body p{
+    margin-bottom: 0px;
+}
+#customerInformation{
+    width: 95%;
+}
+#customer_table th{
+    width: 36%;
+}
+#customer_table td{
+    width: 64%;
+}
+#taskInformation{
+    width: 95%;
+}
+#task_Table th{
+    width: 36%;
+}
+#task_Table td{
+    width: 64%;
+}
+#dispatchesContainer{
+    overflow-y: auto;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sage100 Field Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon"  href="favicon.ico">
+    <link rel="stylesheet" href="Content/Styles/Frameworks/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="Content/Styles/Index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Content/Styles/Common.css" />
+</head>
+
+<body>
+    <div id="toggle-menu" class="toggle-menu">
+        <div class="toggle-menu-inner">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-none">
+                    <a class="nav-link" href="#" id="settingsPage"><i class="fas fa-cog fa-2x"></i><span class="margin-right-nav-item"></span>Settings</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"  data-toggle="modal" data-target="#aboutModal"><i class="fas fa-info-circle fa-2x"></i><span class="margin-right-nav-item"></span>About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mr-auto" href="Index.html">Sage100 Field Service</a>
+        <a id="toggleMenu"><i class="fas fa-bars fa-2x"></i></a>
+    </nav>
+    <div class="jumbotron">
+        <div class="loading d-none">
+            <div class=""></div>
+        </div>
+        <div class="row justify-content-center">
+            <form class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-6">
+                <div class="form-group">
+                    <label class="form-check-label" for="companyInput">Company :</label>
+                    <input type="text" class="form-control" id="companyInput" aria-describedby="emailHelp" placeholder="Enter company">
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label" for="userNameInput">Username :</label>
+                    <input type="text" class="form-control" id="userNameInput" aria-describedby="emailHelp" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label" for="passwordInput">Password :</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="submitCredentials" class="btn btn-primary mx-auto">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="aboutModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Sage100 Field Service by Information Integration Group, Inc.</p>
+                    <p>2018 &copy; Information Integration Group, Inc.</p>
+                    <p>Version 2.1.14</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/Frameworks/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/Frameworks/popper.min.js"></script>
+    <script src="Scripts/Frameworks/bootstrap.min.js"></script>
+    <script src="Scripts/Frameworks/Fontawesome/all.min.js"></script>
+    <script src="Scripts/API.js"></script>
+    <script src="Scripts/Index.js"></script>
+</body>
+
+</html>

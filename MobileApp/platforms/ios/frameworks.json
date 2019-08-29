@@ -1,0 +1,8 @@
+{
+    "SystemConfiguration.framework": 1,
+    "CoreTelephony.framework": 1,
+    "Speech.framework": 1,
+    "CoreBluetooth.framework": 1,
+    "ExternalAccessory.framework": 1,
+    "CoreLocation.framework": 2
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dispatches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon"  href="../favicon.ico">
+    <link rel="stylesheet" href="../Content/Styles/Frameworks/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../Content/Styles/Dispatches.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../Content/Styles/Common.css" />
+</head>
+
+<body>
+    <div id="toggle-menu" class="toggle-menu">
+        <div class="toggle-menu-inner">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-none">
+                    <a class="nav-link" href="#" id="settingsPage"><i class="fas fa-cog fa-2x"></i><span class="margin-right-nav-item"></span>Settings</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal"><i class="fas fa-info-circle fa-2x"></i><span
+                            class="margin-right-nav-item"></span>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="signOutBtn"><i class="fas fa-sign-out-alt fa-2x"></i><span class="margin-right-nav-item"></span>Sign
+                        Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mr-auto" href="Dispatches.html">Sage100 Field Service</a>
+        <a id="toggleMenu"><i class="fas fa-bars fa-2x"></i></a>
+    </nav>
+    <div class="jumbotron">
+        <div style="margin: 0px 8px;">
+            <button class="btn btn-light filterBtn" id="filterBtn">
+                <i class="fas fa-filter fa-2x"></i>
+            </button>
+            <input type="text" name="fastFilter" class="form-control fastFilter" id="fastFilter">
+        </div>
+        <div class="loading"> <div class="loadingIcon"></div></div>
+        <div class="row justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start d-none"
+            id="dispatchesContainer">
+        </div>
+    </div>
+
+    <div class="modal" id="aboutModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Sage100 Field Service by Information Integration Group, Inc.</p>
+                    <p>2018 &copy; Information Integration Group, Inc.</p>
+                    <p>Version 2.1.14</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="taskInfoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Task Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div id="taskInformation">
+                            <table id="task_Table" class="table table-striped table-bordered table-hover">
+                                <thead></thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Task No</th>
+                                        <td id="taskInfo_TaskNo"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Type</th>
+                                        <td id="taskInfo_Type"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Status</th>
+                                        <td id="taskInfo_Status"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td id="taskInfo_Desc"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contract No</th>
+                                        <td id="taskInfo_ContractNo"></td>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTask" class="natureOfTask">
+                                        <th>Nature Of Task</th>
+                                        <td id="taskInfo_NatureOfTask"></td>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTask_questionHeader" class="natureOfTask">
+                                        <th>Question</th>
+                                        <th>Answer</th>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTaskQuestion1" class="natureOfTask">
+                                        <th id="taskInfo_NatureOfTaskQuestion1"></th>
+                                        <td id="taskInfo_NatureOfTaskAnswer1">
+                                            <Input id="taskInfo_NatureOfTaskAnswer1_Input" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTaskQuestion2" class="natureOfTask">
+                                        <th id="taskInfo_NatureOfTaskQuestion2"></th>
+                                        <td id="taskInfo_NatureOfTaskAnswer2">
+                                            <Input id="taskInfo_NatureOfTaskAnswer2_Input" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTaskQuestion3" class="natureOfTask">
+                                        <th id="taskInfo_NatureOfTaskQuestion3"></th>
+                                        <td id="taskInfo_NatureOfTaskAnswer3">
+                                            <Input id="taskInfo_NatureOfTaskAnswer3_Input" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTaskQuestion4" class="natureOfTask">
+                                        <th id="taskInfo_NatureOfTaskQuestion4"></th>
+                                        <td id="taskInfo_NatureOfTaskAnswer4">
+                                            <Input id="taskInfo_NatureOfTaskAnswer4_Input" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none" id="exd_natureOfTaskQuestion5" class="natureOfTask">
+                                        <th id="taskInfo_NatureOfTaskQuestion5"></th>
+                                        <td id="taskInfo_NatureOfTaskAnswer5">
+                                            <Input id="taskInfo_NatureOfTaskAnswer5_Input" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none" class="exd_description_div" id="exd_description_div" style="margin-bottom:0px;">
+                                        <td style="padding-bottom: 0px; margin-bottom: 0px; " class="exd_description_div"
+                                            colspan="2">
+                                            <div>
+                                                <div class="alert alert-success">
+                                                    <a class="close" onclick="$('#exd_description_div').hide()" class="close">&times;</a>
+                                                    <strong>Task Extended Description</strong>
+                                                    <div id="iig_extendedDescriptionText"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none" class="dispatch_exd_description_div" id="dispatch_exd_description_div" style="margin-bottom:0px;">
+                                        <td style="padding-bottom: 0px; margin-bottom: 0px; " class="dispatch_exd_description_div"
+                                            colspan="2">
+                                            <div>
+                                                <div class="alert alert-success">
+                                                    <a class="close" onclick="$('#dispatch_exd_description_div').hide()" class="close">&times;</a>
+                                                    <strong>Dispatch Extended Description</strong>
+                                                    <div id="iig_dispatchExtendedDescriptionText"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnSave" class="btn btn-primary" data-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="customerInfoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div id="customerInformation">
+                            <table id="customer_table" class="table table-striped table-bordered table-hover">
+                                <thead></thead>
+                                <tbody>
+                                    <th>Customer No</th>
+                                    <td id="CustNo"></td>
+                                    <tr>
+                                        <th>Bill To Name</th>
+                                        <td id="BillToName"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bill To Address</th>
+                                        <td><a href="" class="BillToAddr-link">
+                                                <div id="BillToAddr"></div>
+                                            </a></td>
+                                    </tr>
+                                    </tr>
+                                    <th>Bill To City</th>
+                                    <td id="BillToCity"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ship To Name</th>
+                                        <td id="ShipToName"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ship To Address</th>
+                                        <td><a href="" class="ShipToAddr-link">
+                                                <div id="ShipToAddr"></div>
+                                            </a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ship To City</th>
+                                        <td id="ShipToCity"></td>
+                                    </tr>
+                                    <tr class="customerARInfo">
+                                        <th>Credit Limit</th>
+                                        <td id="CreditLimit"></td>
+                                    </tr>
+                                    <tr class="customerARInfo">
+                                        <th>A/R Balance</th>
+                                        <td id="AR_Balance"></td>
+                                    </tr>
+                                    <tr class="customerARInfo">
+                                        <th>Open Order Amt</th>
+                                        <td id="OpenOrderAmt"></td>
+                                    </tr>
+                                    <tr class="customerARInfo">
+                                        <th>Over By</th>
+                                        <td id="OverBy"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="filterModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Filters Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="filterPopup_taskNoSelects">TaskNo</label>
+                        </div>
+                        <select class="custom-select" id="filterPopup_taskNoSelects">
+                            <option value="NONE" selected>Choose...</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="filterPopup_CustomerSelects">Customer</label>
+                        </div>
+                        <select class="custom-select" id="filterPopup_CustomerSelects">
+                            <option value="NONE" selected>Choose...</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="filterPopup_StatusSelects">Status</label>
+                        </div>
+                        <select class="custom-select" id="filterPopup_StatusSelects">
+                            <option value="NONE" selected>Choose...</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label for="filterPopup_DispatchDate" class="input-group-text">Dispatch Date</label>
+                        </div>
+                        <input class="form-control" type="date" value="" id="filterPopup_DispatchDate">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label for="filterPopup_StartDate" class="input-group-text">Start Date</label>
+                        </div>
+                        <input class="form-control" type="date" value="" id="filterPopup_StartDate">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label for="filterPopup_EndDate" class="input-group-text">End Date</label>
+                        </div>
+                        <input class="form-control" type="date" value="" id="filterPopup_EndDate">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" id="filterClearBtn">Clear</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/Frameworks/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/Frameworks/popper.min.js"></script>
+    <script src="../Scripts/Frameworks/bootstrap.min.js"></script>
+    <script src="../Scripts/Frameworks/Fontawesome/all.min.js"></script>
+    <script src="../Scripts/API.js"></script>
+    <script src="../Scripts/Dispatches.js"></script>
+</body>
+
+</html>

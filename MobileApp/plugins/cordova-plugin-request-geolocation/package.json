@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-request-geolocation",
+  "version": "1.0.1",
+  "description": "Cordova Request GPS Plugin",
+  "cordova": {
+    "id": "cordova-plugin-request-geolocation",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "geolocation",
+    "gps",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=6.3.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC"
+}

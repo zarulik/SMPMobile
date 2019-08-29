@@ -1,0 +1,360 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+@media(min-height: 490px) {
+    html,
+    body {
+        overflow-y: hidden;
+    }
+}
+
+nav {
+    border-bottom: 1px solid;
+    color: #3c8dbc;
+}
+
+a {
+    color: #3c8dbc;
+}
+
+label {
+    color: #3c8dbc;
+}
+
+.jumbotron {
+    background-color: #FFFFFF;
+    margin-bottom: 0px;
+    padding: 1rem;
+    padding-bottom: 0px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3c8dbc;
+    border-color: #3c8dbc;
+}
+
+#toggle-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: -moz-available;          
+    height: -webkit-fill-available;  
+    height: fill-available;
+    display: none;
+    z-index: 1300;
+}
+
+.toggle-menu-inner {
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 0px;
+    border: 1px solid #3c8dbc;
+    border-radius: 10px;
+    width: 150px;
+    z-index: 1300;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+a.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.margin-right-nav-item {
+    margin-right: 5px;
+}
+
+/* Style the tab */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #3c8dbc;
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 0px;
+    transition: 0.3s;
+    color: #3c8dbc;
+    text-align: center;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover,
+.tab button.active:hover {
+    background-color: #09527c;
+    color: #ffffff;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #3c8dbc;
+    color: #ffffff;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+    /* display: none; */
+    padding: 6px 12px;
+    /* border: 1px solid #3c8dbc; */
+    border-top: none;
+    /* border-radius: 0px 0px 10px 10px; */
+}
+
+.dispatchInfo {
+    background-color: #9e9e9e29;
+    color: #3c8dbc;
+    border-top: 1px solid #3c8dbc;
+    border-left: 1px solid #3c8dbc;
+    border-right: 1px solid #3c8dbc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*border-radius: 10px 10px 0px 0px;*/
+}
+.dispatchButtons{
+    margin-left: 10px;
+}
+.dispatchInfo p {
+    margin-bottom: 0px;
+}
+
+.modal-body {
+    color: #3c8dbc
+}
+
+.modal-body p {
+    margin-bottom: 0px;
+}
+
+#customerInformation {
+    width: 95%;
+}
+
+#customer_table th {
+    width: 36%;
+}
+
+#customer_table td {
+    width: 64%;
+}
+
+#taskInformation {
+    width: 95%;
+}
+
+#task_Table th {
+    width: 36%;
+}
+
+#task_Table td {
+    width: 64%;
+}
+
+.table-toolbar {
+    margin-bottom: 3px;
+}
+
+.table-toolbar button {
+    margin-left: 3px;
+}
+.single-line {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.single-line br {
+    display: none;
+}
+.single-line * {
+    display: inline;
+    white-space: nowrap;
+}
+
+@media(max-width:576px) {
+    .itemcode.single-line {
+        width: 130px;
+        overflow: scroll;
+    }
+    .comment.single-line {
+        width: 130px;
+        overflow: scroll;
+    }
+    .attachmentName.single-line {
+        width: 180px;
+        overflow: scroll;
+    }
+}
+
+.hideTabContent {
+    position: absolute;
+    visibility: hidden;
+    display: block;
+    z-index: -1;
+    left: 0px;
+}
+.hideInformation{
+    position: absolute;
+    visibility: hidden;
+    display: block;
+    z-index: -1;
+    left: 0px;
+}
+
+.table-container {
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #3c8dbc;
+}
+
+.table-container th {
+    color: #3c8dbc;
+}
+
+.table-responsive {
+    display: table;
+}
+
+#dispatchHeader .form-container ,#dispatchSignature .form-container{
+    overflow: auto;
+}
+
+.wrapper {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.signaturePad-container{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.signature-pad {
+    border: 1px solid #3c8dbc;
+    width: 280px;
+    height: 200px;
+}
+.signaturePadBtns{
+    width: 98%;
+}
+.signaturePadBtns button{
+    margin-left: 10px;
+}
+#dispatchSignature .row:first-child{
+    width: 100%;
+}
+.inner-row{
+    width: 98%;
+}
+#dispatchSignature .table-toolbar{
+    margin-right: 15px;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#dispatchDetailsTableBody button{
+    padding: 2px 5px;
+    margin-left: 2px;
+}
+#dispatchDetailLaborsTableBody button{
+    padding: 2px 5px;
+    margin-left: 2px;
+}
+#scrollable-dropdown-menu .tt-menu {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+#printingInvoiceInfo{
+      color:#000;
+}
+#printingInvoiceInfo .col-12 {
+    padding-left: 2px;
+    padding-right: 3px;
+}
+#printingInvoiceInfo .col-2 {
+    padding-left: 2px;
+    padding-right: 3px;
+}
+#printingInvoiceInfo .col-3 {
+    padding-left: 2px;
+    padding-right: 3px;
+}
+#printingInvoiceInfo .col-4 {
+    padding-left: 2px;
+    padding-right: 3px;
+}
+#printingInvoiceInfo .col-6 {
+    padding-left: 2px;
+    padding-right: 3px;
+}
+#printingInvoiceInfo h3{
+    color: #000000;
+}
+.boldHeader{
+    font-weight: bold;
+}
+#lastNextDeliveryModal .modal-body{
+    color:#000000;
+}
+.deliveryBox{
+    border: 1px solid;
+    padding: 2px;
+    text-align: center;
+    margin: 2px;
+    color: #3c8dbc;
+}
+.deliveryBox h5{
+    margin:0px;
+    padding:0px;
+    cursor: pointer;
+}
+.deliveryBox h5:hover{
+    background: #3c8dbc;
+    color: #FFFFFF;
+}
+.deliveryDetailBox{
+    padding: 10px;
+    text-align: left;
+    color: #000000;
+}
+.deliveryDetailBox p{
+    display: inline-block;
+}
+.deliveryDetailBox p .itemCodeSpan {
+    width: 80px;
+    float: left;
+}
+.deliveryDetailBox p .qtySpan {
+    width: 50px;
+    float: left;
+}
+.deliveryDetailBox p .priceSpan {
+    width: 70px;
+    float: left;
+}
+.deliveryDetailBox p .extensionSpan {
+    width: 80px;
+    float: left;
+}
+.input-group > .twitter-typeahead {
+    flex: 1 1 auto;
+    width: 80%;
+}

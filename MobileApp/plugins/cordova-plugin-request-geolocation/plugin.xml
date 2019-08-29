@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:rim="http://www.blackberry.com/ns/widgets"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="cordova-plugin-request-geolocation"
+      version="1.0.1">
+
+    <name>Request GPS</name>
+    <description>Cordova Request GPS Plugin</description>
+    <license></license>
+    <keywords>cordova,geolocation,gps</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <engines>
+        <engine name="cordova-android" version=">=6.3.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-feature android:name="android.hardware.location.gps" />
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="IIGGeolocation">
+              <param name="android-package" value="com.iigservices.geolocation.Geolocation" />
+          </feature>
+        </config-file>
+
+        <source-file src="src/android/Geolocation.java" target-dir="src/com/iigservices/geolocation/" />
+
+        <js-module src="www/geolocation.js" name="geolocation">
+			<clobbers target="iig.geolocation" />
+		</js-module>
+        <framework src="com.android.support:appcompat-v7:27.1.0" />
+        <framework src="com.android.support:design:27.1.0" />
+        <framework src="com.android.support.constraint:constraint-layout:1.1.3" />
+        <framework src="com.google.android.gms:play-services-location:16.0.0" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/geolocation.js" name="geolocation">
+            <clobbers target="iig.geolocation" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="IIGGeolocation">
+                <param name="ios-package" value="Geolocation"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/Geolocation.swift" />
+        <framework src="CoreLocation.framework" />
+
+    </platform>
+</plugin>
